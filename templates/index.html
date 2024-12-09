@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roulette Prediction</title>
+</head>
+<body>
+    <h1>Roulette Prediction</h1>
+    <form method="POST" action="/predict">
+        <label>Select Model:</label><br>
+        <input type="radio" name="model_type" value="statistical" required> Statistical Model<br>
+        <input type="radio" name="model_type" value="reinforcement" required> Reinforcement Learning Model<br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
